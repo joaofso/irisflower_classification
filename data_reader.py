@@ -1,5 +1,4 @@
-import datatable
-
+import pandas as pd
 '''
    1. sepal length in cm
    2. sepal width in cm
@@ -16,8 +15,5 @@ DATA_FILE_PATH = 'data/iris.data'
 DATA_COLUMNS = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width', 'flower']
 
 def read_data():
-    data = datatable.fread(file=DATA_FILE_PATH, columns=DATA_COLUMNS)
+    data = pd.read_csv(DATA_FILE_PATH, header=None, names=DATA_COLUMNS)
     return data
-
-
-read_data()

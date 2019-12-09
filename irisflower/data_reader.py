@@ -11,7 +11,7 @@ import pandas as pd
 
 '''
 
-DATA_FILE_PATH = 'data/iris.data'
+DATA_FILE_PATH = '../data/iris.data'
 DATA_COLUMNS = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width', 'flower']
 
 def read_data():

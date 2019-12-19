@@ -10,9 +10,9 @@ def pairwise_correlations(data, graphical=False):
     """
     corr = data.corr()
     if graphical:
-        graphical_correlation(data, corr)
+        return graphical_correlation(data, corr)
     else:
-        print(corr)
+        return str(corr)
 
 
 def graphical_correlation(data, correlation):
@@ -27,5 +27,3 @@ def graphical_correlation(data, correlation):
     ax.set_xticklabels(data.columns)
     ax.set_yticklabels(data.columns)
     return plt
-
-pairwise_correlations(reader.read_data())
